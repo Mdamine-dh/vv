@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استطلاع رأي الموقع</title>
+   <style>
+    /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHIE GÉNÉRALE */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+    direction: rtl;
+}
+
+/* TITRE PRINCIPAL */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4a90e2;
+}
+
+/* FORMULAIRE */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: right; /* Aligner les textes RTL */
+}
+
+/* LABELS */
+form label {
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* CHAMPS DE TEXTE */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* CHAMPS DE SÉLECTION */
+form select {
+    background-color: #f9f9f9;
+}
+
+/* TEXTAREA */
+form textarea {
+    resize: none;
+}
+
+/* RADIO BUTTONS */
+form input[type="radio"] {
+    margin-left: 0.5rem;
+}
+
+/* BOUTON D'ENVOI */
+form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357abd;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+   </style>
+</head>
+<body>
+   <h1 align="center">استطلاع رأي الموقع</h1>
+  <hr>   <form action="#" method="post">
+        <!-- Prénom -->
+        <label for="prenom ">  الاسم   :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <!-- Nom -->
+        <label for="nom"> اللفب:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <!-- Date de naissance -->
+        <label for="date_naissance">تاريخ الميلاد:</label>
+        <input type="date" id="date_naissance" name="date_naissance" required><br><br>
+
+        <!-- Genre -->
+        <label>الجنس:</label><br>
+        <input type="radio" id="homme" name="genre" value="ذكر" required>
+        <label for="homme">ذكر</label><br>
+        <input type="radio" id="femme" name="genre" value="أنثى">
+        <label for="femme">أنثى</label><br><br>
+
+        <!-- Email -->
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Gouvernorat -->
+        <label for="gouvernorat">المحافظة:</label>
+        <select id="gouvernorat" name="gouvernorat" required>
+            <option value="> اختر الولاية</option>
+            <option value="Tunis">تونس</option>
+            <option value="Ariana">أريانة</option>
+            <option value="Ben Arous">بن عروس</option>
+            <option value="Bizerte">بنزرت</option>
+            <option value="Gabes">قابس</option>
+            <option value="Gafsa">قفصة</option>
+            <option value="Jendouba">جندوبة</option>
+            <option value="Kairouan">القيروان</option>
+            <option value="Kasserine">القصرين</option>
+            <option value="Kebili">قبلي</option>
+            <option value="Manouba">منوبة</option>
+            <option value="Mednine">مدنين</option>
+            <option value="Monastir">المنستير</option>
+            <option value="Nabeul">نابل</option>
+            <option value="Sfax">صفاقس</option>
+            <option value="Sidi Bouzid">سيدي بوزيد</option>
+            <option value="Siliana">سليانة</option>
+            <option value="Tataouine">تطاوين</option>
+            <option value="Tozeur">توزر</option>
+            <option value="Zaghouan">زغوان</option>
+        </select><br><br>
+
+        <!-- Avis -->
+        <label for="avis">رأيك في الموقع:</label><br>
+        <textarea id="avis" name="avis" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Note -->
+        <label for="note">ضع تقييم للموقع:</label><br>
+        <select id="note" name="note" required>
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <!-- Bouton d'envoi -->
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>
